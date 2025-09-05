@@ -1,6 +1,4 @@
-/* Custom Closets Page Styles - Orjinal Tasarim */
-
-/* Reset ve Base Styles */
+/* Main styles for custom closets page */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +12,7 @@
   background-color: #ffffff;
 }
 
-/* Hero Section */
+/* Hero area */
 .hero-section {
   position: relative;
   overflow: hidden;
@@ -55,11 +53,9 @@
 
 .hero-title {
   font-size: 3.5rem;
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 2rem;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-  font-family: 'Helvetica Neue', 'Arial', sans-serif;
-  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .cta-button {
@@ -82,14 +78,14 @@
   text-decoration: none;
 }
 
-/* Container */
+/* Page container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Closets Sections */
+/* Content sections */
 .closets-section {
   padding: 15px 0;
   background-color: #ffffff;
@@ -111,11 +107,9 @@
 
 .section-header h2 {
   font-size: 2.5rem;
-  font-weight: 100;
+  font-weight: 300;
   color: #666666;
   margin-bottom: 8px;
-  font-family: 'Helvetica Neue', 'Arial', sans-serif;
-  letter-spacing: 1px;
 }
 
 .section-header p {
@@ -125,7 +119,7 @@
   margin-bottom: 20px;
 }
 
-/* Features Tags */
+/* Product features */
 .features-tags {
   margin-top: 0;
   display: flex;
@@ -151,7 +145,7 @@
   margin: 0 8px;
 }
 
-/* Closets Grid - Orjinal Tasarim */
+/* Product grid */
 .closets-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -192,7 +186,7 @@
   transform: scale(1.02);
 }
 
-/* Responsive Design - Orjinal Tasarim */
+/* Mobile responsive */
 @media (max-width: 900px) {
   .closets-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -274,7 +268,7 @@
   }
 }
 
-/* Animation for smooth scrolling */
+/* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }

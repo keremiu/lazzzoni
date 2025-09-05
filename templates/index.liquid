@@ -1,51 +1,179 @@
-{% comment %}
-  Ana sayfa template'i - Shopify tema gereksinimi
-{% endcomment %}
+{{ 'custom-closets.css' | asset_url | stylesheet_tag }}
 
-<div class="homepage">
-  <h1>{{ shop.name }}</h1>
-  <p>Welcome to our store</p>
+<!-- Ana Sayfa - Custom Closets -->
+<div class="custom-closets-page">
   
-  {% comment %}
-    Custom closets sayfasina yonlendirme
-  {% endcomment %}
-  <a href="/pages/custom-closets" class="btn">View Custom Closets</a>
+  <!-- Hero Section - Ana banner -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1558&q=80" 
+             alt="Custom Closets Hero" />
+        <div class="hero-overlay">
+          <h1 class="hero-title">Custom Closets</h1>
+          <a href="#custom-closets" class="cta-button">Start Designing With Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Custom Closets Section -->
+  <section class="closets-section" id="custom-closets">
+    <div class="container">
+      <div class="section-header">
+        <h2>Custom Closets</h2>
+        <p>Fully customizable to the inch mix & match all materials and modules</p>
+      </div>
+      
+      <div class="closets-grid">
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Custom Closet 1" />
+        </div>
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Custom Closet 2" />
+        </div>
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Custom Closet 3" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vetrina Glass Closets Section -->
+  <section class="closets-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Vetrina Glass Closets</h2>
+        <div class="features-tags">
+          <span class="tag">Extra Clear</span>
+          <span class="tag">Fluted</span>
+          <span class="tag">Reflective Glass</span>
+        </div>
+      </div>
+      
+      <div class="closets-grid">
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Glass Closet 1" />
+        </div>
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Glass Closet 2" />
+        </div>
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Glass Closet 3" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Forma Solid Closets Section -->
+  <section class="closets-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Forma Solid Closets</h2>
+        <div class="features-tags">
+          <span class="tag">Wood</span>
+          <span class="tag">Fabric</span>
+          <span class="tag">Leather</span>
+          <span class="tag">Lacquered Closets</span>
+        </div>
+      </div>
+      
+      <div class="closets-grid">
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Solid Closet 1" />
+        </div>
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1551298370-7a1706d74d8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Solid Closet 2" />
+        </div>
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Solid Closet 3" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spazio Walk-in Open Closets Section -->
+  <section class="closets-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Spazio Walk-in Open Closets</h2>
+      </div>
+      
+      <div class="closets-grid">
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Walk-in Closet 1" />
+        </div>
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Walk-in Closet 2" />
+        </div>
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Walk-in Closet 3" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vanity Make-up Closets Section -->
+  <section class="closets-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Vanity Make-up Closets</h2>
+      </div>
+      
+      <div class="closets-grid">
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Vanity Closet 1" />
+        </div>
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1551298370-7a1706d74d8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Vanity Closet 2" />
+        </div>
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Vanity Closet 3" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Murphy Bed / Sleeping Integrated Closets Section -->
+  <section class="closets-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Murphy Bed / Sleeping Integrated Closets</h2>
+      </div>
+      
+      <div class="closets-grid">
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Murphy Bed 1" />
+        </div>
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Murphy Bed 2" />
+        </div>
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Murphy Bed 3" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Island Storage Units Section -->
+  <section class="closets-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Island Storage Units</h2>
+      </div>
+      
+      <div class="closets-grid">
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Island Storage 1" />
+        </div>
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Island Storage 2" />
+        </div>
+        <div class="closet-item">
+          <img src="https://images.unsplash.com/photo-1551298370-7a1706d74d8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Island Storage 3" />
+        </div>
+      </div>
+    </div>
+  </section>
+
 </div>
-
-<style>
-  .homepage {
-    padding: 40px 20px;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .homepage h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-  
-  .homepage p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: #666;
-  }
-  
-  .btn {
-    display: inline-block;
-    background-color: #C5621B;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #A0501A;
-    color: white;
-    text-decoration: none;
-  }
-</style>

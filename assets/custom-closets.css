@@ -164,7 +164,8 @@
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  aspect-ratio: 1;
+  aspect-ratio: 1 / 1;
+  width: 100%;
 }
 
 .closet-item:hover {
@@ -177,6 +178,7 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  display: block;
 }
 
 .closet-item:hover img {
@@ -245,8 +247,8 @@
     font-size: 1.8rem;
   }
   
-  .closet-item img {
-    height: 250px;
+  .closet-item {
+    aspect-ratio: 1 / 1;
   }
 }
 

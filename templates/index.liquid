@@ -1,0 +1,51 @@
+{% comment %}
+  Ana sayfa template'i - Shopify tema gereksinimi
+{% endcomment %}
+
+<div class="homepage">
+  <h1>{{ shop.name }}</h1>
+  <p>Welcome to our store</p>
+  
+  {% comment %}
+    Custom closets sayfasina yonlendirme
+  {% endcomment %}
+  <a href="/pages/custom-closets" class="btn">View Custom Closets</a>
+</div>
+
+<style>
+  .homepage {
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .homepage h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .homepage p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #C5621B;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #A0501A;
+    color: white;
+    text-decoration: none;
+  }
+</style>

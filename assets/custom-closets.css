@@ -1,4 +1,4 @@
-/* Custom Closets Page Styles */
+/* Custom Closets Page Styles - Orjinal Tasarim */
 
 /* Reset ve Base Styles */
 * {
@@ -8,9 +8,10 @@
 }
 
 .custom-closets-page {
-  font-family: 'Arial', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   line-height: 1.6;
   color: #333;
+  background-color: #ffffff;
 }
 
 /* Hero Section */
@@ -82,12 +83,12 @@
 
 /* Closets Sections */
 .closets-section {
-  padding: 80px 0;
-  background-color: #f8f8f8;
+  padding: 60px 0;
+  background-color: #ffffff;
 }
 
 .closets-section:nth-child(even) {
-  background-color: white;
+  background-color: #fafafa;
 }
 
 .section-header {
@@ -128,39 +129,50 @@
   border: 1px solid #ddd;
 }
 
-/* Closets Grid */
+/* Closets Grid - Orjinal Tasarim */
 .closets-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .closet-item {
   background: white;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  aspect-ratio: 1;
 }
 
 .closet-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
 }
 
 .closet-item img {
   width: 100%;
-  height: 300px;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
 .closet-item:hover img {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
-/* Responsive Design */
+/* Responsive Design - Orjinal Tasarim */
+@media (max-width: 900px) {
+  .closets-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
@@ -177,7 +189,8 @@
   
   .closets-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 15px;
+    max-width: 400px;
   }
   
   .container {
@@ -185,12 +198,19 @@
   }
   
   .closets-section {
-    padding: 50px 0;
+    padding: 40px 0;
   }
   
   .features-tags {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tag {
+    font-size: 0.8rem;
+    padding: 6px 12px;
   }
 }
 

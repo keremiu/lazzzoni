@@ -41,9 +41,9 @@
 
 .hero-overlay {
   position: absolute;
-  top: 50%;
+  bottom: 80px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   text-align: center;
   color: white;
   z-index: 2;
@@ -92,8 +92,13 @@
 }
 
 .section-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 60px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .section-header h2 {
@@ -106,27 +111,34 @@
 .section-header p {
   font-size: 1.1rem;
   color: #666;
-  max-width: 600px;
-  margin: 0 auto;
+  font-style: italic;
+  margin-bottom: 20px;
 }
 
 /* Features Tags */
 .features-tags {
-  margin-top: 20px;
+  margin-top: 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 15px;
+  font-size: 1.1rem;
+  color: #2c2c2c;
+  font-weight: bold;
 }
 
 .tag {
-  background-color: #f0f0f0;
-  color: #333;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  border: 1px solid #ddd;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+}
+
+.tag:not(:last-child)::after {
+  content: " / ";
+  margin: 0 8px;
 }
 
 /* Closets Grid - Orjinal Tasarim */
@@ -203,14 +215,14 @@
   
   .features-tags {
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 10px;
   }
   
-  .tag {
-    font-size: 0.8rem;
-    padding: 6px 12px;
+  .section-header {
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 

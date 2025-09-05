@@ -63,13 +63,13 @@
   display: inline-block;
   background-color: #C5621B;
   color: white;
-  padding: 12px 60px;
+  padding: 12px 80px;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: normal;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   transition: background-color 0.3s ease;
-  min-width: 400px;
+  min-width: 450px;
   text-align: center;
 }
 
@@ -204,9 +204,9 @@
   }
   
   .cta-button {
-    padding: 10px 50px;
-    font-size: 1.1rem;
-    min-width: 350px;
+    padding: 10px 60px;
+    font-size: 1.3rem;
+    min-width: 380px;
   }
   
   .hero-cta-section {
@@ -260,9 +260,9 @@
   }
   
   .cta-button {
-    padding: 10px 40px;
-    font-size: 1rem;
-    min-width: 280px;
+    padding: 10px 50px;
+    font-size: 1.2rem;
+    min-width: 320px;
   }
   
   .hero-cta-section {

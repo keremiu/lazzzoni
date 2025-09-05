@@ -1,0 +1,25 @@
+<!-- Custom Closets Page Template -->
+{% comment %}
+  Bu sayfa Lazzoni ozel dolaplari icin tasarlanmistir.
+  Shopify sections kullanarak dinamik icerik yonetimi saglar.
+{% endcomment %}
+
+<div class="custom-closets-page">
+  
+  {% comment %}
+    Hero section - Ana banner alani
+  {% endcomment %}
+  {% section 'custom-closets-hero' %}
+  
+  {% comment %}
+    Asagidaki section'lar farkli dolap kategorilerini gosterir
+    Her biri ayri ayri yonetilebilir ve ozellestirilebilir
+  {% endcomment %}
+  
+  {% comment %} Custom Closets {% endcomment %}
+  {% section 'closets-category' %}
+  
+  {% comment %} Additional content areas {% endcomment %}
+  {{ page.content }}
+  
+</div>

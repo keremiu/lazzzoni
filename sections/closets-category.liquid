@@ -1,0 +1,252 @@
+{{ 'custom-closets.css' | asset_url | stylesheet_tag }}
+
+<div class="closets-category-section">
+  <div class="closets-section">
+    <div class="container">
+      
+      {%- if section.settings.section_title != blank -%}
+        <div class="section-header">
+          <h2>{{ section.settings.section_title }}</h2>
+          
+          {%- if section.settings.section_description != blank -%}
+            <p>{{ section.settings.section_description }}</p>
+          {%- endif -%}
+          
+          {%- if section.settings.show_features_tags -%}
+            <div class="features-tags">
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'feature_tag' -%}
+                  <span class="tag">{{ block.settings.tag_text }}</span>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      
+      <div class="closets-grid">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'closet_item' -%}
+            <div class="closet-item" {{ block.shopify_attributes }}>
+              {%- if block.settings.closet_image != blank -%}
+                {%- if block.settings.closet_link != blank -%}
+                  <a href="{{ block.settings.closet_link }}">
+                {%- endif -%}
+                
+                <img 
+                  src="{{ block.settings.closet_image | image_url: width: 600 }}" 
+                  alt="{{ block.settings.closet_title | escape }}"
+                  width="600"
+                  height="400"
+                  loading="lazy"
+                />
+                
+                {%- if block.settings.closet_link != blank -%}
+                  </a>
+                {%- endif -%}
+              {%- else -%}
+                <div class="closet-placeholder">
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+              {%- endif -%}
+              
+              {%- if block.settings.closet_title != blank -%}
+                <div class="closet-item-content">
+                  <h3 class="closet-item-title">{{ block.settings.closet_title }}</h3>
+                  
+                  {%- if block.settings.closet_description != blank -%}
+                    <p class="closet-item-description">{{ block.settings.closet_description }}</p>
+                  {%- endif -%}
+                  
+                  {%- if block.settings.closet_link != blank and block.settings.button_text != blank -%}
+                    <a href="{{ block.settings.closet_link }}" class="closet-item-button">
+                      {{ block.settings.button_text }}
+                    </a>
+                  {%- endif -%}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      
+      {%- if section.settings.view_all_text != blank and section.settings.view_all_link != blank -%}
+        <div class="section-footer">
+          <a href="{{ section.settings.view_all_link }}" class="view-all-button">
+            {{ section.settings.view_all_text }}
+          </a>
+        </div>
+      {%- endif -%}
+      
+    </div>
+  </div>
+</div>
+
+<style>
+  .closet-item-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .closet-item-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2c2c2c;
+  }
+  
+  .closet-item-description {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  
+  .closet-item-button {
+    display: inline-block;
+    background-color: #C5621B;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .closet-item-button:hover {
+    background-color: #A0501A;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .closet-placeholder {
+    width: 100%;
+    height: 300px;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .section-footer {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .view-all-button {
+    display: inline-block;
+    background-color: transparent;
+    color: #C5621B;
+    border: 2px solid #C5621B;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .view-all-button:hover {
+    background-color: #C5621B;
+    color: white;
+    text-decoration: none;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Closets Category",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Custom Closets"
+    },
+    {
+      "type": "textarea",
+      "id": "section_description",
+      "label": "Section Description",
+      "default": "Fully customizable to the inch mix & match all materials and modules"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_features_tags",
+      "label": "Show Feature Tags",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "view_all_text",
+      "label": "View All Button Text"
+    },
+    {
+      "type": "url",
+      "id": "view_all_link",
+      "label": "View All Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "closet_item",
+      "name": "Closet Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "closet_image",
+          "label": "Closet Image"
+        },
+        {
+          "type": "text",
+          "id": "closet_title",
+          "label": "Closet Title"
+        },
+        {
+          "type": "textarea",
+          "id": "closet_description",
+          "label": "Closet Description"
+        },
+        {
+          "type": "url",
+          "id": "closet_link",
+          "label": "Closet Link"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text"
+        }
+      ]
+    },
+    {
+      "type": "feature_tag",
+      "name": "Feature Tag",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tag_text",
+          "label": "Tag Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Closets Category",
+      "blocks": [
+        {
+          "type": "closet_item"
+        },
+        {
+          "type": "closet_item"
+        },
+        {
+          "type": "closet_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

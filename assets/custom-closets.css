@@ -79,14 +79,14 @@
   text-decoration: none;
 }
 
-/* Page container */
+/* Page */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Content sections */
+/* Content*/
 .closets-section {
   padding: 15px 0;
   background-color: #ffffff;
@@ -188,7 +188,7 @@
   transform: scale(1.02);
 }
 
-/* Mobile responsive */
+/* For Mobile Responsiveness */
 @media (max-width: 900px) {
   .closets-grid {
     grid-template-columns: repeat(2, 1fr);

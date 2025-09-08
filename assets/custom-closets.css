@@ -274,7 +274,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Hero subtitle styles */
+/* Hero  styles */
 .hero-subtitle {
   font-size: 1.2rem;
   margin-bottom: 2rem;
@@ -284,7 +284,6 @@ html {
   margin-right: auto;
 }
 
-/* Hero placeholder styles */
 .hero-placeholder {
   width: 100%;
   height: 100%;

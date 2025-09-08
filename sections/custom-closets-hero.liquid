@@ -4,79 +4,21 @@
   <div class="hero-section">
     <div class="hero-container">
       <div class="hero-image">
-        {%- if section.settings.hero_image != blank -%}
-          <img 
-            src="{{ section.settings.hero_image | image_url: width: 1920 }}" 
-            alt="{{ section.settings.hero_title | escape }}"
-            width="1920"
-            height="1080"
-            loading="lazy"
-          />
-        {%- else -%}
-          <div class="hero-placeholder">
-            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
-          </div>
-        {%- endif -%}
+        <img 
+          src="{{ 'CustomClosetHead.png' | asset_url }}" 
+          alt="Custom Closets Hero"
+          width="1920"
+          height="1080"
+          loading="lazy"
+        />
         
         <div class="hero-overlay">
-          {%- if section.settings.hero_title != blank -%}
-            <h1 class="hero-title">{{ section.settings.hero_title }}</h1>
-          {%- endif -%}
-          
-          {%- if section.settings.hero_subtitle != blank -%}
-            <p class="hero-subtitle">{{ section.settings.hero_subtitle }}</p>
-          {%- endif -%}
-          
-          {%- if section.settings.cta_text != blank and section.settings.cta_link != blank -%}
-            <a href="{{ section.settings.cta_link }}" class="cta-button">
-              {{ section.settings.cta_text }}
-            </a>
-          {%- endif -%}
+          <h1 class="hero-title">Custom Closets</h1>
+          <p class="hero-subtitle">Transform your space with our premium custom closet solutions</p>
+          <a href="#custom-closets" class="cta-button">Start Designing With Us</a>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- admin panelinden ayarlanabilir -->
-{% schema %}
-{
-  "name": "Custom Closets Hero",
-  "tag": "section",
-  "class": "section",
-  "settings": [
-    {
-      "type": "image_picker",
-      "id": "hero_image",
-      "label": "Hero Image"
-    },
-    {
-      "type": "text",
-      "id": "hero_title",
-      "label": "Hero Title",
-      "default": "Custom Closets"
-    },
-    {
-      "type": "textarea",
-      "id": "hero_subtitle",
-      "label": "Hero Subtitle",
-      "default": "Transform your space with our premium custom closet solutions"
-    },
-    {
-      "type": "text",
-      "id": "cta_text",
-      "label": "Button Text",
-      "default": "Start Designing With Us"
-    },
-    {
-      "type": "url",
-      "id": "cta_link",
-      "label": "Button Link"
-    }
-  ],
-  "presets": [
-    {
-      "name": "Custom Closets Hero"
-    }
-  ]
-}
-{% endschema %}
+

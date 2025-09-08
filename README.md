@@ -10,28 +10,7 @@ lazzoni/
 │   └── index.liquid                 # Ana sayfa template'i (custom closets içeriği)
 ├── assets/
 │   ├── custom-closets.css          # CSS stil dosyası
-│   ├── CustomClosetHead.png        # Hero bölümü ana görseli
-│   ├── CustomClosetImage1.png      # Custom closets ürün görseli 1
-│   ├── CustomClosetImage2.png      # Custom closets ürün görseli 2
-│   ├── CustomClosetImage3.png      # Custom closets ürün görseli 3
-│   ├── VertinaGlassClosetImage1.png # Vetrina glass closet görseli 1
-│   ├── VertinaGlassClosetImage2.png # Vetrina glass closet görseli 2
-│   ├── VertinaGlassClosetImage3.png # Vetrina glass closet görseli 3
-│   ├── FermaSolidClosetImage1.png  # Forma solid closet görseli 1
-│   ├── FermaSolidClosetImage2.png  # Forma solid closet görseli 2
-│   ├── FermaSolidClosetImage3.png  # Forma solid closet görseli 3
-│   ├── SpazioOpenClosetImage1.png  # Spazio walk-in görseli 1
-│   ├── SpazioOpenClosetImage2.png  # Spazio walk-in görseli 2
-│   ├── SpazioOpenClosetImage3.png  # Spazio walk-in görseli 3
-│   ├── VanityClosetImage1.png      # Vanity make-up görseli 1
-│   ├── VanityClosetImage2.png      # Vanity make-up görseli 2
-│   ├── VanityClosetImage3.png      # Vanity make-up görseli 3
-│   ├── MurphyClosetImage1.png      # Murphy bed görseli 1
-│   ├── MurphyClosetImage2.png      # Murphy bed görseli 2
-│   ├── MurphyClosetImage3.png      # Murphy bed görseli 3
-│   ├── IslandUnitImage1.png        # Island storage görseli 1
-│   ├── IslandUnitImage2.png        # Island storage görseli 2
-│   └── IslandUnitImage3.png        # Island storage görseli 3
+│   ├── *.png                       # Görseller
 ├── config/
 │   ├── settings_data.json          # Tema ayarları
 │   └── settings_schema.json        # Tema yapılandırma şeması
@@ -54,7 +33,7 @@ Ana sayfada custom closet ürünlerinin sergilendiği bir showcase. 7 farklı do
 6. **Murphy Bed** - Yatak entegreli dolaplar
 7. **Island Storage** - Ada tipi depolama
 
-## 🔧 Teknik Özellikler
+## Teknik Özellikler
 
 - **Platform:** Shopify Liquid template engine kullanılarak geliştirildi
 - **Layout Sistemi:** CSS Grid ve Flexbox ile modern layout yapısı
@@ -63,7 +42,7 @@ Ana sayfada custom closet ürünlerinin sergilendiği bir showcase. 7 farklı do
 - **Görsel Optimizasyonu:** PNG formatında optimize edilmiş ürün görselleri
 - **Kod Yapısı:** Tek merkezi template ile temiz ve bakımı kolay kod
 
-## 📱 Responsive Tasarım
+## Responsive Tasarım
 
 **Ekran Boyutlarına Göre Düzen:**
 - **Mobil (0-480px):** 
@@ -84,7 +63,7 @@ Ana sayfada custom closet ürünlerinin sergilendiği bir showcase. 7 farklı do
 - Buton boyutları cihaza göre optimize edilir
 - Text boyutları responsive olarak ayarlanır
 
-## 🎨 Tasarım Detayları
+## Tasarım Detayları
 
 **Renk Paleti:**
 - **Primary Orange:** #C5621B (Lazzoni marka rengi - butonlar, vurgular)
@@ -105,18 +84,11 @@ Ana sayfada custom closet ürünlerinin sergilendiği bir showcase. 7 farklı do
 - **Spacing:** Tutarlı margin/padding sistemi
 - **Animations:** Smooth scroll, hover efektleri, fade-in animasyonları
 
-## 🚀 Kurulum
+## Deneyin
 
-### Shopify Admin Paneline Giriş
+### Shopify  Giriş
 - **URL:** https://lazzzoni.myshopify.com
 - **Şifre:** lazzonikerem
-
-### Dosyaları Yükleme
-1. Shopify Admin → Online Store → Themes
-2. Horizon temasında Actions → Edit code
-3. Bu projedeki dosyaları ilgili klasörlere yükleyin
-
----
 
 **Geliştirici:** Kerem İhsan Ulaşan  
 **Versiyon:** 1.0  

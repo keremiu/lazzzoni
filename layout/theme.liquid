@@ -25,10 +25,6 @@
     {% endif %}
 
     {{ content_for_header }}
-
-    {%- if template contains 'custom-closets' -%}
-      {{ 'custom-closets.css' | asset_url | stylesheet_tag }}
-    {%- endif -%}
   </head>
 
   <body>

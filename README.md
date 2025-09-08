@@ -108,7 +108,7 @@ Ana sayfada custom closet ürünlerinin sergilendiği bir showcase. 7 farklı do
 ## 🚀 Kurulum
 
 ### Shopify Admin Paneline Giriş
-- **URL:** https://lazzzoni.myshopify.com/admin
+- **URL:** https://lazzzoni.myshopify.com
 - **Şifre:** lazzonikerem
 
 ### Dosyaları Yükleme

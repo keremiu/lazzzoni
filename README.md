@@ -105,6 +105,17 @@ Ana sayfada custom closet ürünlerinin sergilendiği bir showcase. 7 farklı do
 - **Spacing:** Tutarlı margin/padding sistemi
 - **Animations:** Smooth scroll, hover efektleri, fade-in animasyonları
 
+## 🚀 Kurulum
+
+### Shopify Admin Paneline Giriş
+- **URL:** https://lazzzoni.myshopify.com/admin
+- **Şifre:** lazzonikerem
+
+### Dosyaları Yükleme
+1. Shopify Admin → Online Store → Themes
+2. Horizon temasında Actions → Edit code
+3. Bu projedeki dosyaları ilgili klasörlere yükleyin
+
 ---
 
 **Geliştirici:** Kerem İhsan Ulaşan  
